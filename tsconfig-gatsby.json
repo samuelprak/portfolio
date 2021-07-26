@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./",
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "strict": true,
+    "noEmit": false,
+    "jsx": "react",
+    "target": "esnext",
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+  },
+  "exclude": [
+    "./node_modules",
+    "./public",
+    "./.cache",
+    "./src/**/*"
+  ],
+  "include": [
+    "./config/gatsby-config.ts",
+    "./config/gatsby-node.ts",
+    "./config/gatsby-browser.tsx",
+    "./config/gatsby-ssr.tsx"
+  ]
+}

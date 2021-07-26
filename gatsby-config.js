@@ -1,7 +1,18 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Portfolio",
+    siteUrl: "https://samuelprak.fr",
+    title: "Samuel Prak - Développeur web",
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.svg$/,
+        },
+      },
+    },
+    "gatsby-plugin-postcss",
+    `gatsby-plugin-react-helmet`,
+  ],
 };
