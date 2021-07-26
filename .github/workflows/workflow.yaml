@@ -13,10 +13,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Download private packages
-      run: wget https://uploads.samuelprak.fr/packages/fontawesome-Ajk7mcCB3mfZGKXMpA1uGy9P6b39K5VV/fortawesome-pro.zip
+      run: wget -nv https://uploads.samuelprak.fr/packages/fontawesome-Ajk7mcCB3mfZGKXMpA1uGy9P6b39K5VV/fortawesome-pro.zip
 
     - name: Unzip private packages
       run: unzip fortawesome-pro.zip -d $GITHUB_WORKSPACE/packages
+    
+    - name: Load Docker Layer Caching
+      uses: satackey/action-docker-layer-caching@v0.0.11
+      continue-on-error: true
 
     - name: Build container image
       run: docker build -t ghcr.io/herasus/portfolio:latest .
