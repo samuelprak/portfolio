@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Download private packages
-      run: wget -nv https://uploads.samuelprak.fr/packages/fontawesome-Ajk7mcCB3mfZGKXMpA1uGy9P6b39K5VV/fortawesome-pro.zip
+      run: wget -nv https://uploads.samuelprak.fr/packages/fontawesome-{{ secrets.FONTAWESOME_TOKEN }}/fortawesome-pro.zip
 
     - name: Unzip private packages
       run: unzip fortawesome-pro.zip -d $GITHUB_WORKSPACE/packages
@@ -40,4 +40,4 @@ jobs:
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 cluster01
 
     - name: Deploy to DigitalOcean Kubernetes
-      run: kubectl apply -f $GITHUB_WORKSPACE/k8s/deployment.yml
+      run: kubectl apply -f $GITHUB_WORKSPACE/k8s/deployment.yaml
