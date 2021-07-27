@@ -23,6 +23,9 @@ module.exports = {
           900: "#0D452D",
         },
       },
+      gridTemplateColumns: {
+        "fill-36": "repeat(auto-fill, minmax(18rem, 1fr))",
+      },
     },
   },
   variants: {

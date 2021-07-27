@@ -7,6 +7,7 @@ import section1 from "../../assets/img/projects/beesolve/section1.png";
 import section2 from "../../assets/img/projects/beesolve/section2.png";
 import section3 from "../../assets/img/projects/anytime/section3.png";
 import section4 from "../../assets/img/projects/anytime/section4.png";
+import ExternalLink from "../../components/ExternalLink";
 // import screen1 from "../../assets/img/projects/timecalendar/screen1.png";
 // import screen2 from "../../assets/img/projects/timecalendar/screen2.png";
 
@@ -28,6 +29,7 @@ export const beesolveProject: Project = {
       url: "https://www.youtube.com/watch?v=WgCRqX6pnoA",
     },
   ],
+  color: "#F9A826",
   featured: true,
   sections: [
     {
@@ -37,11 +39,32 @@ export const beesolveProject: Project = {
       text: (
         <>
           <p>
-            Dans le cadre d’un projet d’école, nous avons imaginé et développé
-            une plate-forme de mise en relation de clients et de professionnels.
-            Pour le client, BeeSolve permet de simplifier la recherche de
-            professionnels, en centralisant les différents métiers sur un même
-            site internet.
+            Dans le cadre d’un projet d’école à l'ESIEE Paris, nous avons
+            imaginé et développé à quatre (
+            <ExternalLink
+              href="https://www.linkedin.com/in/eddy-monnot-b0a071112/"
+              color="primary"
+            >
+              Eddy
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink
+              href="https://www.linkedin.com/in/tristan-laun%C3%A9-2138b8133/"
+              color="primary"
+            >
+              Tristan
+            </ExternalLink>
+            ,{" "}
+            <ExternalLink
+              href="https://www.linkedin.com/in/smayur1/"
+              color="primary"
+            >
+              Mayur
+            </ExternalLink>{" "}
+            et moi) une plate-forme de mise en relation de clients et de
+            professionnels. Pour le client, BeeSolve permet de simplifier la
+            recherche de professionnels, en centralisant les différents métiers
+            sur un même site internet.
           </p>
           <p>
             Les professionnels peuvent assurer leur présence en ligne grâce à

@@ -30,9 +30,9 @@ const HomeAboutMe: FC = () => {
             <Image className="w-full m-auto" style={{ maxWidth: "200px" }} />
           </div>
           <div className="leading-relaxed">
-            Je suis Samuel Prak, j'ai 20 ans et je suis étudiant en Informatique
-            à l'ESIEE Paris. Je suis passionné par les nouvelles technologies et
-            la musique. Dans la vie, j'aime voyager et jouer du piano.
+            Je suis Samuel Prak, j'ai 20 ans et je suis développeur web. Je suis
+            passionné par les nouvelles technologies et la musique. Dans la vie,
+            j'aime voyager et jouer du piano.
           </div>
           <div className="text-center">
             <ExternalLink href="/cv_samuelprak.pdf">

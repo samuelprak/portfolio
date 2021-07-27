@@ -14,5 +14,12 @@ module.exports = {
     },
     "gatsby-plugin-postcss",
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-fontawesome-css`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-88135025-1",
+      },
+    },
   ],
 };

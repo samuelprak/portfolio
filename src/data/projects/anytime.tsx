@@ -33,6 +33,7 @@ export const anytimeProject: Project = {
       url: "https://livingparisian.com",
     },
   ],
+  color: "#3767DC",
   featured: true,
   sections: [
     {

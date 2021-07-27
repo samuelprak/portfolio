@@ -38,6 +38,7 @@ export const anywhereProject: Project = {
       url: "https://livingparisian.com",
     },
   ],
+  color: "#3767DC",
   featured: true,
   sections: [
     {
@@ -48,7 +49,7 @@ export const anywhereProject: Project = {
         <>
           <p>
             J’ai rejoint Living Parisian en 2017 en tant qu’apprenti développeur
-            full stack, pour développeur leur channel manager et intégrer les
+            full stack, pour développer leur channel manager et intégrer les
             différents canaux de réservation. L’objectif est d’unifier les
             différents sites de réservation en ligne, comme Airbnb ou
             Booking.com, sur une même solution.

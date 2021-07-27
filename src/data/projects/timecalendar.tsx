@@ -29,6 +29,7 @@ export const timecalendarProject: Project = {
       url: "https://timecalendar.app",
     },
   ],
+  color: "#f72b61",
   featured: true,
   sections: [
     {

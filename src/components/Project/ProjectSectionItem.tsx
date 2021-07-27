@@ -23,7 +23,7 @@ const ProjectSectionItem: FC<ProjectSectionItemProps> = ({
               reversed && "md:flex-row-reverse md:space-x-reverse"
             )}
           >
-            <div className="space-y-4">
+            <div className="space-y-4 flex-grow">
               <div className="space-y-4 text-base">{text}</div>
             </div>
             {image && (

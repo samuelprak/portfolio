@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import React, { FC, HTMLProps } from "react";
+import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 export interface LinkProps extends HTMLProps<HTMLAnchorElement> {
   color?: "primary" | "white";
@@ -16,11 +17,11 @@ const ExternalLink: FC<LinkProps> = ({
   ...rest
 }) => {
   return (
-    <a
+    <OutboundLink
       className={classNames("transition", color && colors[color], className)}
       target="_blank"
       rel="noreferrer noopener"
-      {...rest}
+      {...(rest as any)}
     />
   );
 };

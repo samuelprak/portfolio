@@ -1,7 +1,6 @@
 import { PageProps } from "gatsby";
 import React, { FC } from "react";
 import ProjectLayout from "../components/Project/ProjectLayout";
-import { LocationProviderComponent } from "../context/LocationContext";
 import { projects } from "../data/projects";
 
 export interface ProjectsProps extends PageProps {

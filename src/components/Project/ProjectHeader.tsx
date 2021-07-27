@@ -13,7 +13,7 @@ const ProjectHeader: FC = () => {
       }}
       className="bg-cover bg-center pt-20"
     >
-      <Container className="pt-12 flex flex-col justify-between h-full space-y-16">
+      <Container className="pt-12 flex flex-col justify-between h-full space-y-12">
         <div className="space-y-4">
           <h2 className="font-teko text-5xl uppercase text-shadow-hard">
             {titleNode ?? title}
@@ -23,7 +23,7 @@ const ProjectHeader: FC = () => {
           </div>
         </div>
         <div className="self-center">
-          <img src={headerSrc} alt={title} />
+          {headerSrc && <img src={headerSrc} alt={title} />}
         </div>
       </Container>
     </div>

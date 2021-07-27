@@ -53,8 +53,8 @@ const Hero: FC = () => {
             </HeroInfoTitle>
             <div className="border-b-2 border-white sm:border-gray-500 w-24 h-0.5"></div>
             <div className="text-white sm:text-gray-400 font-normal pr-4">
-              Je suis Samuel Prak, j'ai 20 ans et je suis étudiant en
-              Informatique à l'ESIEE Paris.
+              Développeur web, musicien, pianiste et photographe en quête de
+              temps.
             </div>
             <div className="space-x-6 text-gray-200">
               <ExternalLink href="https://www.linkedin.com/in/samuel-prak/">

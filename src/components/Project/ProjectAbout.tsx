@@ -33,21 +33,23 @@ const ProjectLinkItem: FC<{ link: ProjectLink }> = ({ link }) => {
   const { url, title, type = "web" } = link;
 
   return (
-    <ExternalLink href={url} color="primary">
-      <FontAwesomeIcon icon={iconsByType[type]} className="mr-2" />
-      {title}
-    </ExternalLink>
+    <div>
+      <ExternalLink href={url} color="primary">
+        <FontAwesomeIcon icon={iconsByType[type]} className="mr-2" />
+        {title}
+      </ExternalLink>
+    </div>
   );
 };
 
 const ProjectAbout: FC = () => {
-  const { about, goal, technologies, links } = useProjectContext();
+  const { about, aboutNode, goal, technologies, links } = useProjectContext();
 
   return (
     <Container className="flex flex-col sm:flex-row py-8 space-y-4 sm:space-y-0 sm:space-x-4">
       {about && (
         <ProjectAboutCol>
-          <ProjectAboutItem title="À propos" text={about} />
+          <ProjectAboutItem title="À propos" text={aboutNode ?? about} />
         </ProjectAboutCol>
       )}
       {goal && (
@@ -75,11 +77,11 @@ const ProjectAbout: FC = () => {
             <ProjectAboutItem
               title="Liens"
               text={
-                <>
+                <div className="space-y-1">
                   {links.map((link) => (
                     <ProjectLinkItem key={link.url} link={link} />
                   ))}
-                </>
+                </div>
               }
             />
           )}
