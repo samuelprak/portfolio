@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React, { FC } from "react";
-import styled from "styled-components";
 import { ProjectSection } from "../../data/projects";
 import Container from "../Container";
 import ProjectMediaItem from "./ProjectMediaItem";
@@ -15,7 +14,9 @@ const ProjectSectionItem: FC<ProjectSectionItemProps> = ({
   return (
     <div className={classNames("py-16", light && "bg-section-light")}>
       <Container>
-        <h3 className="font-teko uppercase text-4xl mb-4">{title}</h3>
+        {title && (
+          <h3 className="font-teko uppercase text-4xl mb-4">{title}</h3>
+        )}
         {type === "text" && (
           <div
             className={classNames(

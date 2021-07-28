@@ -12,17 +12,29 @@ const Footer: FC = () => {
       <div className="py-8 space-y-8">
         <div className="text-center space-x-4">
           <ExternalLink href="https://github.com/Herasus">
-            <Button size="sm" icon={<FontAwesomeIcon icon={faGithub} />}>
+            <Button
+              size="sm"
+              icon={<FontAwesomeIcon icon={faGithub} />}
+              className="mb-4"
+            >
               GitHub
             </Button>
           </ExternalLink>
           <ExternalLink href="https://www.linkedin.com/in/samuel-prak">
-            <Button size="sm" icon={<FontAwesomeIcon icon={faLinkedinIn} />}>
+            <Button
+              size="sm"
+              icon={<FontAwesomeIcon icon={faLinkedinIn} />}
+              className="mb-4"
+            >
               LinkedIn
             </Button>
           </ExternalLink>
           <ExternalLink href="mailto:me@samuelprak.fr">
-            <Button size="sm" icon={<FontAwesomeIcon icon={faEnvelope} />}>
+            <Button
+              size="sm"
+              icon={<FontAwesomeIcon icon={faEnvelope} />}
+              className="mb-4"
+            >
               Email
             </Button>
           </ExternalLink>

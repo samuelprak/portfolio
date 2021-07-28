@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React, { DetailedHTMLProps, FC, ImgHTMLAttributes } from "react";
-import photoImage from "../../assets/img/photo.jpg";
 import Button from "../Button";
 import Container from "../Container";
 import ExternalLink from "../ExternalLink";
@@ -10,7 +9,7 @@ const Image: FC<
   DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 > = ({ className, ...rest }) => (
   <img
-    src={photoImage}
+    src="/assets/img/photo.jpg"
     alt="Samuel Prak"
     className={classNames(
       "rounded-full border-primary-600 border-4",

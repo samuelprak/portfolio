@@ -1,13 +1,11 @@
 import React, { FC } from "react";
 import { Helmet } from "react-helmet";
-import profileImage from "../assets/img/photo.jpg";
-import faviconImage from "../assets/img/favicon.png";
+import { useSiteMetadata } from "../context/SiteMetadataContext";
 
 export interface AppMetadata {
   title: string;
   description: string;
   author: string;
-  image: string;
 }
 
 export interface MetadataProps {
@@ -17,33 +15,42 @@ export interface MetadataProps {
 const defaultMetadata: AppMetadata = {
   title: "Samuel Prak - Développeur web",
   description:
-    "Etudiant en informatique, développeur web et passionné par les nouvelles technologies et la musique.",
+    "Développeur web et passionné par les nouvelles technologies et la musique.",
   author: "Samuel Prak",
-  image: profileImage,
 };
 
 const Metadata: FC<MetadataProps> = (props) => {
+  const {
+    siteMetadata: { siteUrl },
+  } = useSiteMetadata();
+
   const metadata = {
     ...defaultMetadata,
     ...(props.metadata ?? {}),
   };
 
-  const { title, description, author, image } = metadata;
+  const { title: metadataTitle, description, author } = metadata;
+  const title =
+    metadataTitle !== defaultMetadata.title
+      ? `${metadataTitle} - Samuel Prak`
+      : metadataTitle;
+  const image = "/assets/img/photo.jpg";
 
-  const imageUrl = `https://samuelprak.fr${image}`;
+  const imageUrl = `${siteUrl}${image}`;
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: "fr" }}>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="author" content={author} />
-      <link rel="icon" href={faviconImage} />
+      <link rel="icon" href="/assets/img/favicon.png" />
 
       <meta property="og:title" content={title} />
       <meta property="og:site_name" content={author} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={imageUrl} />
-      <meta property="og:url" content="https://samuelprak.fr" />
+      <meta property="og:url" content={siteUrl} />
+      <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
