@@ -23,7 +23,7 @@ const HomeProject: FC<HomeProjectProps> = ({ project }) => {
             {logoSrc && <img src={logoSrc} alt={title} className="h-10" />}
           </div>
           <div>
-            <div className="font-teko text-3xl uppercase">{title}</div>
+            <h3 className="font-teko text-3xl uppercase">{title}</h3>
             <div className="text-sm">{description}</div>
           </div>
         </div>
