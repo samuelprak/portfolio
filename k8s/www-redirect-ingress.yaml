@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio-www-redirect
+  namespace: samuel
+  annotations:
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^/(.*)$ https://samuelprak.fr/$1 permanent;
+spec:
+  rules:
+  - host: www.samuelprak.fr
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: portfolio-service
+            port:
+              number: 80

@@ -5,8 +5,6 @@ import header from "../../assets/img/projects/beesolve/header.png";
 import logo from "../../assets/img/projects/beesolve/logo.png";
 import section1 from "../../assets/img/projects/beesolve/section1.png";
 import section2 from "../../assets/img/projects/beesolve/section2.png";
-import section3 from "../../assets/img/projects/anytime/section3.png";
-import section4 from "../../assets/img/projects/anytime/section4.png";
 import ExternalLink from "../../components/ExternalLink";
 // import screen1 from "../../assets/img/projects/timecalendar/screen1.png";
 // import screen2 from "../../assets/img/projects/timecalendar/screen2.png";
@@ -21,7 +19,7 @@ export const beesolveProject: Project = {
   about:
     "BeeSolve est une plate-forme permettant aux clients de trouver le professionnel de leur choix et de prendre rendez-vous en ligne.",
   goal: "Simplifier la recherche de professionnels pour les clients, et faciliter le référencement des professionnels et la gestion de leur activité.",
-  technologies: ["TypeScript", "React", "Node.js, NestJS, MongoDB"],
+  technologies: ["TypeScript", "React", "Node.js, NestJS, MongoDB", "Flutter"],
   links: [
     {
       type: "youtube",

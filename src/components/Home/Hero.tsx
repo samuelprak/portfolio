@@ -1,4 +1,8 @@
-import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { FC } from "react";
 import styled from "styled-components";
@@ -58,6 +62,9 @@ const Hero: FC = () => {
             <div className="space-x-6 text-gray-200">
               <ExternalLink href="https://www.linkedin.com/in/samuel-prak/">
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+              </ExternalLink>
+              <ExternalLink href="https://github.com/Herasus">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
               </ExternalLink>
               <ExternalLink href="https://www.instagram.com/samuelprak/">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />

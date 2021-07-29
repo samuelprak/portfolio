@@ -40,7 +40,9 @@ jobs:
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 cluster01
 
     - name: Deploy to DigitalOcean Kubernetes
-      run: kubectl apply -f $GITHUB_WORKSPACE/k8s/deployment.yaml
+      run: |
+        kubectl apply -f $GITHUB_WORKSPACE/k8s/deployment.yaml
+        kubectl apply -f $GITHUB_WORKSPACE/k8s/www-redirect-ingress.yaml
 
     - name: Restart the deployment
       run: kubectl rollout restart -n samuel deployment portfolio

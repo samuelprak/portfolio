@@ -7,6 +7,16 @@ metadata:
     name: app-ingress
 spec:
   rules:
+  - host: samuelprak.fr
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: portfolio-service 
+            port:
+              number: 80
   - host: portfolio.samuelprak.fr
     http:
       paths:
