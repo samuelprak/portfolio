@@ -58,6 +58,6 @@ spec:
       - name: regcred
       containers:
       - name: portfolio
-        image: ghcr.io/herasus/portfolio:latest
+        image: ghcr.io/samuelprak/portfolio:latest
         ports:
         - containerPort: 80
