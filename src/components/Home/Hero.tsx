@@ -63,7 +63,7 @@ const Hero: FC = () => {
               <ExternalLink href="https://www.linkedin.com/in/samuel-prak/">
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
               </ExternalLink>
-              <ExternalLink href="https://github.com/Herasus">
+              <ExternalLink href="https://github.com/samuelprak">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </ExternalLink>
               <ExternalLink href="https://www.instagram.com/samuelprak/">

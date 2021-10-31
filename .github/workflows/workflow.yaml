@@ -23,7 +23,7 @@ jobs:
       continue-on-error: true
 
     - name: Build container image
-      run: docker build -t ghcr.io/herasus/portfolio:latest .
+      run: docker build -t ghcr.io/samuelprak/portfolio:latest .
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
@@ -34,7 +34,7 @@ jobs:
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Push image to GitHub Container Registry
-      run: docker push ghcr.io/herasus/portfolio:latest
+      run: docker push ghcr.io/samuelprak/portfolio:latest
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 cluster01

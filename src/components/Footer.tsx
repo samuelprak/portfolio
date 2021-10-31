@@ -11,7 +11,7 @@ const Footer: FC = () => {
     <Container>
       <div className="py-8 space-y-8">
         <div className="text-center space-x-4">
-          <ExternalLink href="https://github.com/Herasus">
+          <ExternalLink href="https://github.com/samuelprak">
             <Button
               size="sm"
               icon={<FontAwesomeIcon icon={faGithub} />}
